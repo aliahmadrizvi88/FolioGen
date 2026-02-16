@@ -1,0 +1,223 @@
+@import 'tailwindcss';
+
+/* ======================================================
+   GLOBAL DESIGN SYSTEM — FolioGen
+   Fonts: Geist / Geist Mono
+   Colors: Custom SaaS Palette
+====================================================== */
+
+/* ===========================
+   FONT VARIABLES
+=========================== */
+:root {
+  --font-primary:
+    'Geist', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+
+  --font-mono:
+    'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+}
+
+/* ===========================
+   COLOR VARIABLES
+=========================== */
+:root {
+  /* Backgrounds */
+  --bg-primary: #18181b;
+  --bg-secondary: #202020;
+
+  /* Text */
+  --text-primary: #f8f0e3;
+  --text-muted: #71717a;
+
+  /* Accent */
+  --accent-primary: #bbdf32;
+
+  /* Borders / Dividers */
+  --border-subtle: #27272a;
+}
+
+/* ===========================
+   GLOBAL RESET
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* ===========================
+   BODY DEFAULTS
+=========================== */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Heading Sizes */
+h1 {
+  font-size: 3.5rem; /* 56px */
+}
+h2 {
+  font-size: 2.5rem; /* 40px */
+}
+h3 {
+  font-size: 1.5rem; /* 24px */
+}
+h4 {
+  font-size: 1.25rem; /* 20px */
+}
+
+/* Body text */
+p {
+  margin: 0;
+  font-size: 1rem; /* 16px */
+  color: var(--text-primary);
+}
+
+/* Subtitles / Labels */
+.subtitle,
+.label,
+.meta,
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.875rem; /* 14px */
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Small text */
+small {
+  font-size: 0.75rem; /* 12px */
+  color: var(--text-muted);
+}
+
+/* ===========================
+   LINKS
+=========================== */
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-primary);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+}
+
+.btn-primary {
+  height: 44px;
+  padding: 0 20px;
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+input,
+textarea {
+  font-family: var(--font-primary);
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--accent-primary);
+}
+
+.bg-surface {
+  background-color: var(--bg-secondary);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-subtle);
+}
+
+/* ===========================
+   FOOTER / NAV HELPERS
+=========================== */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
